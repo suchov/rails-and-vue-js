@@ -1,24 +1,34 @@
 <h1>Pages#welcome</h1>
-
+<!-- just showing the message from vue -->
 <div id="app">
   {{ message }}
 </div>
-
+<!-- bind on hover message -->
 <div id="app-2">
   <span v-bind:title="message">
     Hover your mouse over me for a few seconds
     to see my dynamically bound title!
   </span>
 </div>
-
+<!-- if statement depending on data -->
 <div id="app-3">
   <span v-if="seen">Now you see me</span>
 </div>
-
+<!-- for iteration in vue -->
 <div id="app-4">
   <ol>
     <li v-for="todo in todos">
       {{ todo.text }}
     </li>
   </ol>
+</div>
+<!-- v-on attaches a method to event listeners -->
+<div id="app-5">
+  <p>{{ message }}</p>
+  <button v-on:click="reverseMessage">Reverse Message</button>
+</div>
+<!-- v-model creates a two-way binding between form input and app state -->
+<div id="app-6">
+  <p>{{ message }}</p>
+  <input v-model="message">
 </div>
